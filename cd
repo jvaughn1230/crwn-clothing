@@ -1,4 +1,0 @@
-Start detecting EntryPoint: [32m\Users\javau\Documents\ztm\react[39m
-[31m⚠️  [39mError: Cannot find module 'C:\Users\javau\Documents\ztm\react'
-Require stack:
-- C:\Users\javau\AppData\Roaming\npm\node_modules\detect-circular-deps\cli.js
