@@ -13,10 +13,7 @@ const Category = () => {
     const categoriesMap = useSelector(selectCategoriesMap);
     const [products, setProducts] = useState(categoriesMap[category]);
 
-    console.log('render/re-rendering category component');
-
     useEffect (() => {
-        console.log('effect fired calling setProducts');
         setProducts(categoriesMap[category])
     }, [category, categoriesMap]);
 
