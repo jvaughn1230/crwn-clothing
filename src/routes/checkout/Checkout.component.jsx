@@ -4,6 +4,7 @@ import { selectCartItems, selectCartTotal } from '../../store/cart/cart.selector
 
 import CheckoutItem from '../../components/checkout-item/Checkout-Item';
 import { CheckoutContainer, CheckoutHeader, HeaderBlock, Total} from './checkout.styles';
+import PaymentForm from '../../components/payment-form/payment-form.component';
 
 const Checkout = () => {
     const cartItems = useSelector(selectCartItems);
@@ -35,6 +36,7 @@ const Checkout = () => {
                     );
                     })}
                     <Total>Total: ${cartTotal}</Total>
+                    <PaymentForm />
         </CheckoutContainer>
     );
 }
