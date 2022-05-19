@@ -6,31 +6,31 @@ const categories = [
     {
       id: 1,
       title: 'hats',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      imageUrl: 'https://i.ibb.co/nLMN7D3/nati-melnychuk-LFny-Ifsw-Xi-U-unsplash.jpg',
       route: 'shop/hats'
     },
     {
       id: 2,
-      title: 'jackets',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
-      route: 'shop/jackets'
+      title: 'sunglasses',
+      imageUrl: 'https://i.ibb.co/ZHxW3wB/julia-kuzenkov-5a-E-qb-Xq-GSI-unsplash.jpg',
+      route: 'shop/sunglasses'
     },
     {
       id: 3,
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
-      route: 'shop/sneakers'
+      title: 'sandals',
+      imageUrl: 'https://i.ibb.co/Srdtny5/vi-vi-Bu5-CZ88-Xh-N0-unsplash.jpg',
+      route: 'shop/sandals'
     },
     {
       id: 4,
       title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      imageUrl: 'https://i.ibb.co/dJypNfR/apostolos-vamvouras-83ac8x-QPMSs-unsplash.jpg',
       route: 'shop/womens'
     },
     {
       id: 5,
       title: 'mens',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      imageUrl: 'https://i.ibb.co/RD6WpB6/ckturistando-Ipk-RHti-LLy8-unsplash.jpg',
       route: 'shop/mens'
     },
   ];
