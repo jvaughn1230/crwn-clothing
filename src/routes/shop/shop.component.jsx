@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 
 import CategoriesPreview from "../categories-previw/categories-preview.component";
 import Category from "../category/category.component";
-import { fetchCategoriesStart } from "../../store/categories/category.action";
+import { getCategoriesAndDocuments } from "../../utils/firebase/firebase.utils";
+import { setCategories } from "../../store/categories/category.reducer";
 
 //import './shop.styles.scss';
 
@@ -12,8 +13,12 @@ const Shop = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(fetchCategoriesStart());
-  }, [dispatch]);
+    const getCategoriesMap = async () => {
+      const categoriesArray = await getCategoriesAndDocuments("categories");
+      dispatch(setCategories(categoriesArray));
+    };
+    getCategoriesMap();
+  }, []);
 
   return (
     <Routes>
