@@ -1,12 +1,12 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const CheckoutItemContainer = styled.div`
   width: 100%;
   display: flex;
-  min-height: 100px;
+  ${"" /* min-height: 100px; */}
   border-bottom: 1px solid darkgrey;
   padding: 15px 0;
-  font-size: 20px;
+  font-size: clamp(0.5px, 1.3021vw, 20px);
   align-items: center;
 `;
 
@@ -22,6 +22,7 @@ export const ImageContainer = styled.div`
 
 export const BaseSpan = styled.span`
   width: 23%;
+  font-size: clamp(15px, 1.3021vw, 20px);
 `;
 
 export const Quantity = styled(BaseSpan)`

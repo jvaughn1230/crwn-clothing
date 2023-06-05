@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled from "styled-components";
+
+import { device } from "../../screenSize";
 
 export const CheckoutContainer = styled.div`
   width: 55%;
@@ -7,6 +9,12 @@ export const CheckoutContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 50px auto 0;
+  font-size: clamp() @media ${device.desktopM} {
+    width: 80%;
+  }
+  @media ${device.mobile} {
+    width: 90%;
+  }
 `;
 
 export const CheckoutHeader = styled.div`
@@ -20,14 +28,14 @@ export const CheckoutHeader = styled.div`
 export const HeaderBlock = styled.div`
   text-transform: capitalize;
   width: 23%;
-  
+
   &:last-child {
     width: 8%;
-    }
+  }
 `;
 
 export const Total = styled.span`
   margin-top: 30px;
   margin-left: auto;
-  font-size: 36px;
+  font-size: clamp(1.5rem, 2.3438vw, 50px);
 `;
