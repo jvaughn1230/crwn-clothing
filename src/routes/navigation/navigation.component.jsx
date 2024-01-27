@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import CartIcon from "../../components/cart-icon/cart-icon.component";
@@ -21,6 +21,7 @@ import {
 const Navigation = () => {
   const currentUser = useSelector(selectCurrentUser);
   const isCartOpen = useSelector(selectIsCartOpen);
+  const location = useLocation();
 
   return (
     <Fragment>
@@ -36,7 +37,9 @@ const Navigation = () => {
               SIGN OUT
             </NavLink>
           ) : (
-            <NavLink to="/auth">SIGN IN</NavLink>
+            <NavLink to="/auth" state={{ from: location }}>
+              SIGN IN
+            </NavLink>
           )}
           <CartIcon />
         </NavLinks>
