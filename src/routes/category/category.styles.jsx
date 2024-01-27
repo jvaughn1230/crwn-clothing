@@ -6,6 +6,7 @@ export const CategoryContainer = styled.div`
   grid-template-columns: repeat(4, 1fr);
   column-gap: 20px;
   row-gap: 50px;
+  margin-bottom: 30px;
 
   @media ${device.desktopM} {
     grid-template-columns: repeat(3, 1fr);

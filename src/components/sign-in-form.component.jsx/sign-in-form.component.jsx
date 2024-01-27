@@ -1,5 +1,6 @@
 import { useState } from "react";
 // import { useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import FormInput from "../form-input/form-input.component";
 import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
@@ -19,13 +20,17 @@ const defaultFormFields = {
 const SignInForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
+    navigate(`${location.state.from.pathname}`);
   };
 
   const signInWithGoogle = async () => {
     await signInWithGooglePopup();
+    navigate(`${location.state.from.pathname}`);
   };
 
   const handleSubmit = async (event) => {
