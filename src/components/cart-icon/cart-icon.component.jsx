@@ -4,6 +4,7 @@ import {
   selectCartCount,
   selectIsCartOpen,
 } from "../../store/cart/cart.selector";
+
 import { setIsCartOpen } from "../../store/cart/cart.reducer";
 
 import { ReactComponent as ShoppingIcon } from "../../assets/shopping-bag.svg";
@@ -21,7 +22,9 @@ const CartIcon = () => {
   return (
     <CartIconContainer onClick={toggleIsCartOpen}>
       <ShoppingIcon />
-      <ItemCount className="item-count">{cartCount}</ItemCount>
+      <ItemCount className="item-count" data-testid="1">
+        {cartCount}
+      </ItemCount>
     </CartIconContainer>
   );
 };
