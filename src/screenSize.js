@@ -9,5 +9,3 @@ export const device = {
   desktopS: `(max-width: ${size.small})`,
   mobile: `(max-width: ${size.mobile})`,
 };
-
-// 468 & 711 - inner is 163
